@@ -1,0 +1,16 @@
+{
+  "name": "fullstack_app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"cd backend && node server.js\" \"cd my-app && npm start\"",
+    "postinstall": "concurrently \"cd backend && npm install\" \"cd my-app && npm install\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^4.0.1"
+  }
+}

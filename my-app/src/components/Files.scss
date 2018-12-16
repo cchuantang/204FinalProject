@@ -1,0 +1,69 @@
+.file-container {
+    font: 12px/normal 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas';
+    width: 300px;
+    background: #F6F6F6;
+    
+    .file-controls,
+    .file-list > div {
+        display: flex;  
+        justify-content: space-between;
+        padding: 5px 20px;
+        transition: .2s all;
+    }
+    
+    .file-controls {
+        padding-top: 8px;
+        padding-bottom: 8px;
+        font-weight: bold;
+        cursor: default;
+        border-bottom: 1px solid #E3E3E3;
+    }
+
+    .options {
+        i {
+            cursor: pointer;
+            padding: 0 2px;
+            transition: .2s all;
+            opacity: .5;
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+    
+    .file-list {
+        cursor: pointer;
+        
+        & > div {            
+            &.active {
+                color: #093;
+                background: #F0F0F0;
+            }
+            
+            &:hover {
+                background: #F0F0F0;
+                
+                i {
+                    opacity: .5;
+                }
+            }
+
+            .options {
+                display: flex;
+                color: black;
+            }
+            
+            i {
+                opacity: 0;
+                &.starred {
+                    opacity: 1;
+                    font-weight: bold;
+                }
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    
+}
